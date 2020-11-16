@@ -1,0 +1,525 @@
+body {
+    background-color: #f2f4f8;
+    min-width: 300px;
+}
+
+header {
+    background-color: #2d313d;
+}
+
+.logo {
+    width: 36px;
+    height: 24px;
+    margin: 16px 0 16px 8px;
+}
+
+.header {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.header div {
+    float: right;
+    color: #727989;
+    font: 14px Arial;
+}
+
+.header div a {
+    text-decoration: none;
+    color: #727989;
+}
+
+.header div i {
+    font-size: 16px;
+}
+
+.header div .city {
+    border-bottom: dashed 1px;
+    margin: 0 8px 0 24px;
+}
+
+.header div .userPhoto {
+    width: 32px;
+    height: 32px;
+    top: 8px;
+    padding: 0 24px 0 8px;
+    border-radius: 4px;
+    position: relative;
+}
+
+.fa-angle-down,
+.fa-envelope,
+.fa-bell {
+    padding-right: 32px
+}
+
+.Submenu {
+    background-color: #646d81;
+}
+
+.MenuItems {
+    margin: 0 auto;
+    font: 14px Arial
+}
+
+.MenuItems a {
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    padding: 8px 0 12px;
+    margin-right: 44px;
+    }
+
+.MenuItems a:hover {
+    background-color: goldenrod;
+    transition-duration: 0.3s;
+    }
+
+.Burger {
+    background-color: #2d313d;
+    display: none;
+    position: absolute;
+    width: 160px;
+    z-index: 10000;
+    top: 88px;
+    border: solid black 2px;
+    font: 26px Arial
+}
+
+.Burger ul {
+    display: none;
+}
+
+.Burger ul li {
+    padding: 4px 12px;
+}
+
+.Burger ul li a {
+    text-decoration: none;
+    color: rgb(125, 236, 203);
+}
+
+.Burger ul li a:hover {
+    color: grey;
+}
+
+.main {
+    max-width: 960px;
+    margin: 0 auto;
+    box-shadow: 0 4px 12px #e0e2e6;
+    background-color: white;
+}
+
+.main ul {
+    max-width: 180px;
+    padding-top: 24px;
+    float: left;
+}
+
+.main .submenu {
+    margin-top: 32px;
+    padding: 8px 32px 8px 24px;
+    font: 18px Georgia;
+}
+
+.main ul li:hover {
+    border-left: solid goldenrod 6px;
+    padding-right: 12px;
+    transition-duration: 0.3s;
+}
+
+.main ul li {
+    list-style-type: none;
+    padding: 8px 24px 8px 2px;
+    border-left: solid white 5px
+}
+
+.main ul li a {
+    text-decoration: none;
+    font: 14px Arial;
+    color: #99a1b3
+}
+
+.content {
+    margin-left: 180px;
+    border-left: solid #e0e4ed 1px
+}
+
+.content h1 {
+    padding: 32px 0 24px 32px;
+    font: 32px Georgia
+}
+
+.content h1 span {
+    margin-left: 32px;
+    border-bottom: dashed 1px
+}
+
+.searchplace {
+    background-color: #f2f4f8;
+    padding: 4px 32px;
+    color: #99a1b3
+}
+
+.searchplace input[type="text"] {
+    display: inline-block;
+    padding-left: 12px;
+    font: 14px Arial;
+    width: 280px;
+    height: 40px;
+    border: solid #d6d9e1 1px;
+    border-radius: 5px;
+    background: url('/Homework-8/img/search.png') no-repeat 260px 9px;
+    background-color: white
+}
+
+.NewItem {
+    display: inline-block;
+    float: right;
+    position: relative;
+    bottom: 32px
+}
+
+.NewItem span {
+    margin-right: 88px;
+    font: 12px Georgia
+}
+
+.NewItem i {
+    margin-right: 32px;
+    font-size: 18px
+}
+
+.post {
+    font: 12px Arial;
+    color: #99a1b3;
+    margin: 32px
+}
+
+.image {
+    width: 60px;
+    float: left;
+    margin-right: 12px
+}
+
+.BlockPost {
+    margin-left: 80px
+}
+
+.status {
+    background-color: #f2f4f8;
+    padding: 4px 16px;
+    border-radius: 4px;
+    margin-left: 32px
+}
+
+.chat {
+    float: right;
+    margin-right: 32px
+}
+
+.chat span {
+    margin-right: 12px
+}
+
+h2 {
+    color: #4f9cd4;
+    font: bold 16px Arial;
+    padding: 4px 0 4px
+}
+
+.text {
+    color: black;
+    font-size: 14px;
+    padding-bottom: 16px
+}
+
+.buttons {
+    text-align: center;
+    margin-bottom: 88px
+}
+
+.buttons a:first-child {
+    margin-right: 12px;
+    padding: 12px 16px 12px 12px
+}
+
+.buttons a:last-child {
+    padding: 12px 16px 12px 12px
+}
+
+.buttons a {
+    text-decoration: none;
+    color: black;
+    font: 14px Arial;
+    border: solid #99a1b3 1px;
+    border-radius: 4px
+}
+
+.buttons a .fa-angle-left {
+    padding-right: 12px
+}
+
+.buttons a .fa-angle-right {
+    padding-left: 12px
+}
+
+.footer {
+    color: #99a1b3;
+    font: 12px Arial;
+        }
+
+.menuFooter {
+    background-color: #f2f4f8;
+    padding-left: 32px;
+    margin-bottom: 4px
+}
+
+.menuFooter a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 16px 0;
+    margin-right: 16px;
+    color: #99a1b3
+}
+
+.copyright {
+    background-color: #f2f4f8;
+    padding: 16px 0 16px 32px
+}
+
+.copyright img {
+    margin-right: 12px;
+    position: relative;
+    top: 4px
+}
+
+.header2 {
+    display: none;
+    color: white;
+    text-align: center
+}
+
+.header2 img {
+    position: relative;
+    top: 16px
+}
+
+.header2 .Whitelogo {
+    margin-left: 36px
+}
+
+.header2 i {
+    font-size: 36px;
+    padding: 32px 0
+}
+
+.header2 i:hover {
+    color: grey
+}
+
+.header2 span {
+    font: 36px Arial;
+    margin: 0 64px 0 48px
+}
+
+.userPhotoBig {
+    width: 60px;
+    height: 60px;
+    border-radius: 4px;
+    margin-right: 48px
+}
+
+@media screen and (max-width: 770px) {
+    .header,
+    .MenuItems,
+    ul,
+    .searchplace {
+        display: none
+    }
+
+    .header2 {
+    display: inline-block;
+    }
+
+    .Burger ul {
+    vertical-align: baseline;
+    display:inline-block;
+    color: #fff;
+    background: darkorange;
+    float: left;
+    padding: 8px;
+    position: relative;
+    text-decoration: none;
+    transition-duration: 0.5s;
+    }
+
+    .content {
+        margin: 0;
+    }
+
+    .content h1 {
+        font-size: 40px;
+        padding: 32px 32px 32px 32px;
+        text-align: center;
+    }
+
+    .content h1 span {
+        border-bottom: dotted 2px
+    }
+
+    .fa-angle-down {
+        padding-right: 24px;
+    }
+
+    .post {
+        font-size: 22px;
+        margin: 60px
+    }
+
+    .image {
+        margin-right: 16px
+    }
+
+    .BlockPost {
+        margin-left: 24px
+    }
+
+    .status {
+        margin-left: 12px
+    }
+
+    .chat {
+        margin-right: 0
+    }
+
+    h2 {
+        font-size: 26px
+    }
+
+    .text {
+        font-size: 22px
+    }
+
+    .buttons {
+        margin: 64px 0 64px
+    }
+    
+    .buttons a {
+        font-size: 24px;
+        padding: 32px;
+    }
+
+    .buttons a .fa-angle-left {
+        padding-right: 32px
+    }
+
+    .buttons a .fa-angle-right {
+        padding-left: 32px
+    }
+
+    .menuFooter {
+        text-align: center;
+        padding: 32px 0;
+        font-size: 18px
+    }
+
+    .menuFooter a {
+        padding: 0
+    }
+
+    .copyright {
+        display: none
+    }
+}
+
+@media screen and (min-device-width: 340px) and (max-device-width: 500px) {
+    .header2 .fa-navicon {
+        float: left;
+        padding-left: 12px
+    }
+
+    .header2 i {
+        font-size: 24px
+    }
+
+    .header2 .Whitelogo {
+        width: 60px;
+        margin-left: 16px
+    }
+
+    .header2 span {
+        font-size: 20px;
+        margin: 0 12px
+    }
+
+    .header2 .userPhotoBig {
+        width: 44px;
+        height: 44px;
+        margin-right: 16px
+    }
+
+    .Burger {
+        top: 72px;
+        font-size: 20px;
+        width: 140px
+    }
+
+    .Burger ul li {
+        padding: 4px 12px
+    }
+
+    .content h1 {
+        font-size: 34px;
+        padding: 24px 12px
+    }
+
+    .content h1 span {
+        margin-left: 0
+    }
+
+    .post {
+        font-size: 14px;
+        margin: 32px 24px
+    }
+
+    .chat {
+        display: inline-block;
+        padding-top: 5px
+    }
+
+    h2 {
+        font-size: 18px
+    }
+
+    .text {
+        font-size: 16px
+    }
+
+    .buttons {
+        margin: 60px 0 80px
+    }
+
+    .buttons a {
+        font-size: 16px;
+        padding: 24px;
+    }
+
+    .buttons a .fa-angle-left {
+        padding-right: 16px
+    }
+
+    .buttons a .fa-angle-right {
+        padding-left: 16px
+    }
+
+    .menuFooter {
+        text-align: center;
+        padding: 32px 0;
+        font-size: 14px
+    }
+
+    .menuFooter a {
+        align-content: space-between;
+    }
+}
