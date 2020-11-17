@@ -86,13 +86,15 @@ header {
     width: 160px;
     z-index: 10000;
     top: 88px;
-    border: solid black 2px;
-    font: 26px Arial
+    font: 26px Arial;
+    padding-left: 12px;
+    
 }
 
 .Burger ul {
     display: none;
-}
+    list-style: none;
+    }
 
 .Burger ul li {
     padding: 4px 12px;
@@ -131,9 +133,8 @@ header {
 
 .main ul li:hover {
     border-left-color:#37ecba;
-    padding-right: 12px;
     transition-duration: 0.3s;
-    }
+}
 
 .main ul li {
     list-style-type: none;
@@ -178,7 +179,7 @@ header {
     border: solid #d6d9e1 1px;
     border-radius: 5px;
     background: url('/Homework-8/img/search.png') no-repeat 260px 9px;
-    background-color: white
+    background-color: white;
 }
 .searchplace input[type="text"]:hover {
     border: solid #72afd3 1px;
@@ -362,49 +363,32 @@ h2 {
     padding-left: 32px;
     }
     
-    .drop_menu {
-        display: none;
-        height: 100px;
-        width: 110px;
-        background: blue;
-        float: left;
-        position: relative;
-        top: 25px;
-        right: 238px;
-      }
-      
-      .drop_menu a {
-        color: white;
-        text-decoration: none;
-        font: 14px "Times New Roman";
-      }
-      
-      .drop_menu a:hover {
-        color: #1bff04;
-        text-decoration: none;
-        font: 14px "Times New Roman";
-      }
-      
     .Burger {
+        background-color:rgb(224, 224, 224);
         display: block;
         position: absolute;
-        width: 160px;
+        width: 180px;
         z-index: 10000;
-        top: 88px;
-        font: 26px Arial
-    }
+        top: 85px;
+        font-size: 20px;
+        }
+    
+    .Burger ul {
+        display: block;
+        }
        
     .Burger ul li {
-        padding: 4px 12px;
+        padding: 12px 8px;
     }
     
     .Burger ul li a {
         text-decoration: none;
-        color:rgb(136, 185, 147);
+        color:#2d313d;
     }
     
     .Burger ul li a:hover {
         color: grey;
+        border-bottom: dotted 2px;
     }
     .content {
         margin: 0;
@@ -509,16 +493,6 @@ h2 {
         width: 44px;
         height: 44px;
         margin-right: 16px
-    }
-
-    .Burger {
-        top: 72px;
-        font-size: 20px;
-        width: 140px;
-        }
-
-    .Burger ul li {
-        padding: 4px 12px
     }
 
     .content h1 {
