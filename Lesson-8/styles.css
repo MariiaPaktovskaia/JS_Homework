@@ -53,13 +53,15 @@ header {
     padding-right: 32px
 }
 
-.Submenu {
+.MenuItem {    
+    margin: 0 auto;
     background-color: #646d81;
 }
 
 .MenuItems {
     margin: 0 auto;
-    font: 14px Arial
+    max-width: 960px;
+    font: 14px Arial;
 }
 
 .MenuItems a {
@@ -68,16 +70,18 @@ header {
     display: inline-block;
     padding: 8px 0 12px;
     margin-right: 44px;
+    margin-left: 16px;
     }
 
 .MenuItems a:hover {
-    background-color: goldenrod;
+    background-color:#37ecba;
     transition-duration: 0.3s;
+    font-weight: bolder;
     }
 
 .Burger {
-    background-color: #2d313d;
     display: none;
+    background-color: #2d313d;
     position: absolute;
     width: 160px;
     z-index: 10000;
@@ -96,7 +100,7 @@ header {
 
 .Burger ul li a {
     text-decoration: none;
-    color: rgb(125, 236, 203);
+    color:rgb(136, 185, 147);
 }
 
 .Burger ul li a:hover {
@@ -106,7 +110,7 @@ header {
 .main {
     max-width: 960px;
     margin: 0 auto;
-    box-shadow: 0 4px 12px #e0e2e6;
+    box-shadow: 0 4px 12px #151618;
     background-color: white;
 }
 
@@ -121,12 +125,15 @@ header {
     padding: 8px 32px 8px 24px;
     font: 18px Georgia;
 }
+.main .submenu:hover {
+    border-left-color: white;
+    }
 
 .main ul li:hover {
-    border-left: solid goldenrod 6px;
+    border-left-color:#37ecba;
     padding-right: 12px;
     transition-duration: 0.3s;
-}
+    }
 
 .main ul li {
     list-style-type: none;
@@ -146,7 +153,8 @@ header {
 }
 
 .content h1 {
-    padding: 32px 0 24px 32px;
+    margin-top: 0px;
+    padding: 24px 0 24px 24px;
     font: 32px Georgia
 }
 
@@ -171,6 +179,9 @@ header {
     border-radius: 5px;
     background: url('/Homework-8/img/search.png') no-repeat 260px 9px;
     background-color: white
+}
+.searchplace input[type="text"]:hover {
+    border: solid #72afd3 1px;
 }
 
 .NewItem {
@@ -200,6 +211,12 @@ header {
     width: 60px;
     float: left;
     margin-right: 12px
+}
+.post .image:hover {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transition-duration: 0.5s;
 }
 
 .BlockPost {
@@ -238,17 +255,19 @@ h2 {
     text-align: center;
     margin-bottom: 88px
 }
-
-.buttons a:first-child {
-    margin-right: 12px;
-    padding: 12px 16px 12px 12px
-}
-
-.buttons a:last-child {
-    padding: 12px 16px 12px 12px
+.buttons a:hover {
+    background: linear-gradient(45deg, #37ecba, #72afd3);
+    -webkit-box-shadow: 4px 4px 8px 0px rgba(180, 222, 255, 0.35);
+    -moz-box-shadow: 4px 4px 8px 0px rgba(180, 222, 255, 0.35);
+    box-shadow: 4px 4px 8px 0px rgba(180, 222, 255, 0.35);
+    border: solid white 2px;
+    font-weight: bolder;
+    color: white;
 }
 
 .buttons a {
+    margin-right: 24px;
+    padding: 12px 12px 12px 12px;
     text-decoration: none;
     color: black;
     font: 14px Arial;
@@ -333,27 +352,60 @@ h2 {
 @media screen and (max-width: 770px) {
     .header,
     .MenuItems,
-    ul,
-    .searchplace {
-        display: none
+    .searchplace,
+    .main ul {
+    display: none
     }
 
     .header2 {
-    display: inline-block;
+    display: block;
+    padding-left: 32px;
     }
-
-    .Burger ul {
-    vertical-align: baseline;
-    display:inline-block;
-    color: #fff;
-    background: darkorange;
-    float: left;
-    padding: 8px;
-    position: relative;
-    text-decoration: none;
-    transition-duration: 0.5s;
+    
+    .drop_menu {
+        display: none;
+        height: 100px;
+        width: 110px;
+        background: blue;
+        float: left;
+        position: relative;
+        top: 25px;
+        right: 238px;
+      }
+      
+      .drop_menu a {
+        color: white;
+        text-decoration: none;
+        font: 14px "Times New Roman";
+      }
+      
+      .drop_menu a:hover {
+        color: #1bff04;
+        text-decoration: none;
+        font: 14px "Times New Roman";
+      }
+      
+    .Burger {
+        display: block;
+        position: absolute;
+        width: 160px;
+        z-index: 10000;
+        top: 88px;
+        font: 26px Arial
     }
-
+       
+    .Burger ul li {
+        padding: 4px 12px;
+    }
+    
+    .Burger ul li a {
+        text-decoration: none;
+        color:rgb(136, 185, 147);
+    }
+    
+    .Burger ul li a:hover {
+        color: grey;
+    }
     .content {
         margin: 0;
     }
@@ -367,7 +419,7 @@ h2 {
     .content h1 span {
         border-bottom: dotted 2px
     }
-
+    
     .fa-angle-down {
         padding-right: 24px;
     }
@@ -462,8 +514,8 @@ h2 {
     .Burger {
         top: 72px;
         font-size: 20px;
-        width: 140px
-    }
+        width: 140px;
+        }
 
     .Burger ul li {
         padding: 4px 12px
