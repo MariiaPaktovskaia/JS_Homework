@@ -1,12 +1,7 @@
-jQuery(document).ready(function($){
-	$(".fa-navicon").on("click", function(){
-		$(".Burger").slideToggle();
-		
-	});
-});
+$(function(){
 
+    $('.fa-navicon').on('click', function() {
+       $('.menuUl').slideToggle(300)
+    });
 
-var mouseHandled = false;
-$( document ).mouseup( function() {
-	mouseHandled = false;
 });

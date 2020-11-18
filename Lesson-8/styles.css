@@ -92,7 +92,6 @@ header {
 }
 
 .Burger ul {
-    display: none;
     list-style: none;
     }
 
@@ -365,17 +364,17 @@ h2 {
     
     .Burger {
         background-color:rgb(224, 224, 224);
-        display: block;
         position: absolute;
         width: 180px;
         z-index: 10000;
         top: 85px;
         font-size: 20px;
+        display:block;
         }
     
-    .Burger ul {
-        display: block;
-        }
+    .menuUl {
+        display: none; 
+            }
        
     .Burger ul li {
         padding: 12px 8px;
