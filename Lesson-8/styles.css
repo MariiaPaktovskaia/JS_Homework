@@ -1,7 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+}
 body {
     background-color: #f2f4f8;
-    min-width: 300px;
-}
+    height: 100%;
+    min-width: 389px;
+    }
+
+.without_footer{
+    min-height: calc(100vh - 100px);
+    
+    }
+.general_content{
+    
+    max-width: 960px;
+    margin: 0 auto;
+    }
 
 header {
     background-color: #2d313d;
@@ -10,19 +25,15 @@ header {
 .logo {
     width: 36px;
     height: 24px;
-    margin: 16px 0 16px 8px;
-}
-
-.header {
-    max-width: 960px;
-    margin: 0 auto;
+    margin: 16px 0 16px 16px;
 }
 
 .header div {
     float: right;
     color: #727989;
     font: 14px Arial;
-}
+    padding-right: 16px;
+   }
 
 .header div a {
     text-decoration: none;
@@ -35,14 +46,12 @@ header {
 
 .header div .city {
     border-bottom: dashed 1px;
-    margin: 0 8px 0 24px;
-}
+    }
 
 .header div .userPhoto {
-    width: 32px;
-    height: 32px;
+    height: 28px;
     top: 8px;
-    padding: 0 24px 0 8px;
+    padding: 0 24px 0 24px;
     border-radius: 4px;
     position: relative;
 }
@@ -50,7 +59,7 @@ header {
 .fa-angle-down,
 .fa-envelope,
 .fa-bell {
-    padding-right: 32px
+    padding-right: 24px;
 }
 
 .MenuItem {    
@@ -116,9 +125,13 @@ header {
 }
 
 .main ul {
+    min-height: 100vh;
     max-width: 180px;
     padding-top: 24px;
     float: left;
+    
+    background-color: white;
+    
 }
 
 .main .submenu {
@@ -148,12 +161,17 @@ header {
 }
 
 .content {
+    min-height: calc(100vh - 200px);
+    max-width: 960px;
+    margin: 0 auto;
+    background-color: white;
     margin-left: 180px;
-    border-left: solid #e0e4ed 1px
+    border-left: solid #e0e4ed 1px;
+    background-color: white;
 }
 
 .content h1 {
-    margin-top: 0px;
+    margin-top: 0;
     padding: 24px 0 24px 24px;
     font: 32px Georgia
 }
@@ -253,13 +271,14 @@ h2 {
 
 .buttons {
     text-align: center;
-    margin-bottom: 88px
+    padding-bottom: 24px;
+    background-color: white;
 }
 .buttons a:hover {
     background: linear-gradient(45deg, #37ecba, #72afd3);
-    -webkit-box-shadow: 4px 4px 8px 0px rgba(180, 222, 255, 0.35);
-    -moz-box-shadow: 4px 4px 8px 0px rgba(180, 222, 255, 0.35);
-    box-shadow: 4px 4px 8px 0px rgba(180, 222, 255, 0.35);
+    -webkit-box-shadow: 4px 4px 8px 0 rgba(180, 222, 255, 0.35);
+    -moz-box-shadow: 4px 4px 8px 0 rgba(180, 222, 255, 0.35);
+    box-shadow: 4px 4px 8px 0 rgba(180, 222, 255, 0.35);
     border: solid white 2px;
     font-weight: bolder;
     color: white;
@@ -284,15 +303,17 @@ h2 {
 }
 
 .footer {
+    max-width: 960px;
+    margin-left: 180px;
     color: #99a1b3;
     font: 12px Arial;
-        }
+    text-align: center;
+    }
 
 .menuFooter {
     background-color: #f2f4f8;
     padding-left: 32px;
-    margin-bottom: 4px
-}
+    }
 
 .menuFooter a {
     text-decoration: none;
@@ -304,7 +325,7 @@ h2 {
 
 .copyright {
     background-color: #f2f4f8;
-    padding: 16px 0 16px 32px
+    padding: 8px 0 8px 0;
 }
 
 .copyright img {
@@ -452,7 +473,11 @@ h2 {
     .buttons a .fa-angle-right {
         padding-left: 32px
     }
+.footer{
+margin-left: 0;
+text-align: center;
 
+}
     .menuFooter {
         text-align: center;
         padding: 32px 0;
@@ -468,7 +493,7 @@ h2 {
     }
 }
 
-@media screen and (min-device-width: 340px) and (max-device-width: 500px) {
+@media screen and (min-device-width: 390px) and (max-device-width: 500px) {
     .header2 .fa-navicon {
         float: left;
         padding-left: 12px
