@@ -118,77 +118,111 @@ console.log(cloningObject(initialObj))
 
 
 /*Задание 3*/
-var initialObj = {
-    string: 'Vasya',
-    number: 30,
-    boolean: true,
-    undefined: undefined,
-    null: null,
-    array: [1, [2,4,6], 7],
-    object: {
-        string2: 'Petrov',
-        object2: {
-            array2: [{}, {}]
-        },
-        object3: {}
-    },
-    method: function() {
-        alert('Hello');
-    },
-    
-};
-var clonedObj = {
-    string: 'Vasya',
-    number: 30,
-    boolean: true,
-    undefined: undefined,
-    null: null,
-    array: [1, [2,4,6], 7],
-    object: {
-        string2: 'Petrov',
-        object2: {
-            array2: [{}, {}]
-        },
-        object3: {},
-        },
-    method: function() {
-        alert('Hello');
-    },
-};
+function compareValues (obj1, obj2) {
+    if ( getType(obj1) != getType (obj2) ) {
+      return false
+    }
+    var a = getType(obj1)
+    switch (a) {
+    case 'array':  if (!compareArr (obj1, obj2)) return false;
+        break;
+    case 'function':if (!compareFunctions (obj1, obj2)) return false;
+        break;
+    case 'object':if (!compareObjects (obj1, obj2)) return false;
+        break;
+    default:if (!compareSimple (obj1, obj2)) return false;
+        break;
+    }  
+    return true
+    }
 
-function compareObjects(obj1, obj2) {
-    for (key in obj1){
-        for (var newKey in obj2) {
-            if (typeof obj1[key] == 'function' && typeof obj2[newKey] == 'function') {
-                if( obj1[key].toString()!=obj2[newKey].toString() ) {
-                    return false
-                }
-            }      
-            else if (key === newKey) {
-                if( (obj1[key] === obj2[newKey]) || (obj1[key]==null && obj2[newKey] == null) ) {
-                    delete obj1[key]
-                    delete obj2[newKey]
-                }
-                else if ( Array.isArray(obj1[key]) == Array.isArray(obj2[newKey]) ) {
-                    delete obj1[key]
-                    delete obj2[newKey]
-                }
-                else if (typeof obj1[key] == 'object' && typeof obj2[newKey] == 'object' ) {          
-                    compareObjects(obj1[key], obj2[newKey])
-                }    
-            var counter=0
-            }        
-        }
-    console.log(obj1)
-    console.log(obj2)
+   function compareArr (obj1, obj2){
+    if (obj1.length != obj2.length) {
+      return false;
     }
-    if (key in obj1) {
-        counter++
+    for (var i = 0; i < obj2.length; i++) {
+      if ( !compareValues (obj1[i], obj2[i]) ) {
+        return false;
+      } 
     }
-        if(counter==1){
-        return true
+    return true
+  }
+  
+  function compareSimple (obj1, obj2){
+    var result = (obj1 === obj2)? true:false
+    return result
+  }
+  
+  function compareFunctions (obj1, obj2){
+    if (obj1.toString() == obj2.toString()) {
+      return true}
+      return false  
+  }
+  
+  function compareObjects (obj1, obj2){
+    if (obj1 == null && obj2 == null) return true
+    if (! ( compareArr ( Object.keys(obj1), Object.keys(obj2) ) ) ) {
+      return false
+      }
+    for (var key1 in obj1){
+      var result = false
+        for (var key2 in obj2) {
+          if (key1 == key2){
+            result = true }
+          }
+      if (!result) {
+        return false
+      }
     }
-    return false
-}
- 
-compareObjects(initialObj,clonedObj)
+    for (var key1 in obj1) {
+      if ( !(compareValues (obj1[key1], obj2[key1]) ) ) {
+        return false
+      }
+    }
+    return true  
+  }
+  
+  function getType (obj1){
+    if ( Array.isArray(obj1) ) {
+      return 'array'
+      }
+    return typeof obj1
+    }
+   
+  var initialObj = {
+          string: 'Vasya',
+      number: 30,
+      boolean: true,
+      undefined: undefined,
+      null: null,
+      array: [1, [2,4,6], 7],
+      object: {
+          string2: 'Petrov',
+          object2: {
+              array2: [{}, {}]
+          },
+          object3: {},
+          },
+      method: function() {
+          alert('Hello');
+      },
+  };
+  var clonedObj = {
+          string: 'Vasya',
+      number: 30,
+      boolean: true,
+      undefined: undefined,
+      null: null,
+      array: [1, [2,4,6], 7],
+      object: {
+          string2: 'Petrov',
+          object2: {
+              array2: [{}, {}]
+          },
+          object3: {},
+          },
+      method: function() {
+          alert('Hello');
+      },
+  };
+  compareValues(initialObj,clonedObj)
