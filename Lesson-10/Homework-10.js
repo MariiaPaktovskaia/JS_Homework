@@ -4,12 +4,12 @@ function Animal(name) {
     this._foodAmount = 50;
 }
   
-Animal.prototype.formatFoodAmount = function() {
+Animal.prototype._formatFoodAmount = function() {
     return this._foodAmount + ' гр.';
 }
   
 Animal.prototype.dailyNorm = function(amount) {
-    if (!arguments.length) return this.formatFoodAmount();
+    if (!arguments.length) return this._formatFoodAmount();
   
     if (amount < 50 || amount > 500) {
         return 'Недопустимое количество корма.';
@@ -24,8 +24,7 @@ Animal.prototype.feed = function() {
       
 function Cat(name) {
     Animal.apply(this, arguments);
-    this._animalFeed = this.feed;
-}
+    }
       
 Cat.prototype = Object.create(Animal.prototype);
 Cat.prototype.constructor = Cat;
@@ -66,18 +65,36 @@ var initialObj = {
       
 function cloningObject(object){
     var clonedObj = {};
+    var a = getType(object)
+    clonedObj = copyValues (object);
 
+        if (a == 'array') {
+            clonedObj = copyValues (clonedObj)
+        }
+        if (a == 'function') {
+            clonedObj = copyValues (clonedObj)
+        }
+        if (a == 'object' && a != null) {
+            clonedObj =  copyValues (clonedObj)
+        }
+    return clonedObj	
+  }
+  
+function getType (object){
+    if ( Array.isArray(object) ) return 'array'
+    return typeof object
+}
+    
+function copyValues (object) {
+    var clonedObj = {};
+    
         for (var key in object) {
             var clonedKey = key;
-            clonedObj[clonedKey] = object[key]; 
-                  
-            if (typeof object[key] == 'object') {
-                clonedObj[clonedKey] = cloningObject(clonedObj[clonedKey])
-            }
+            clonedObj[clonedKey] = object[key];
         }
-       
-    return clonedObj	
+    return clonedObj
 }
+
 console.log(cloningObject(initialObj))
 
 
