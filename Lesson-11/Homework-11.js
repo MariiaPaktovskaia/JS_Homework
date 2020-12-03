@@ -29,11 +29,9 @@ isPalindrome('довОд')
 
 /*Задание 4*/
 function areAnagrams(word1, word2){
-    word1 = word1.toLowerCase().split('')
-    word2 = word2.toLowerCase().split('')
-    var sorted1 = word1.sort()
-    var sorted2 = word2.sort()
-        if( sorted1.join() == sorted2.join() ) return true;
+    if ( word1.toLowerCase().split('').sort().join() == word2.toLowerCase().split('').sort().join() ) {
+        return true
+    }
     return false
 }
 areAnagrams('довОд', 'вдоод') 
