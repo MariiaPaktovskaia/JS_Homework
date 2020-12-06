@@ -44,9 +44,43 @@ var countSentencesLetters = function(text) {
                 console.log(result[i] + count)
             }
         }
-        
+
     return array
 };
     
 var message = 'Привет, студент! Студент... Как дела, студент?';
 countSentencesLetters(message);
+
+
+/*Задание 5*/
+var repeats = function(text) {
+    var result = text.toLowerCase().split(/[.!?,' ']/)
+    var array=[];
+
+        for (var i=0; i<result.length; i++) {
+            if(result[i]!='') {
+                var count = 1;
+                    for (var j=i+1; j<result.length; j++) {
+                        if(result[i] == result[j]) {
+                            count++;
+                            array.push(result[j] +' : ' + count)
+                        }
+                    }
+            }
+        }
+
+        for (i=0; i<array.length-1;i++) {
+            var max = array[i].substr(array[i].length-1)
+                for (j=1; j<array.length-1;j++)
+                    if(max < array[j].substr(array[j].length-1)){
+                        max = array[j].substr(array[j].length-1)
+                        var place = array.indexOf(array[j])
+                    }
+        }
+    
+    var Result ='Максимальное число повторений у слова'+ '\"' + array[place].substr(0,array[place].length-4) + '\"' + ' - ' + max
+    return Result
+    };
+    
+    var message = 'Написать функцию, которая будет принимать текст в качестве параметра в функцию. У текст должны быть пробелы, точки, запятые, восклицательные и вопросительные знаки. Текст необходимо разбить на предложения по точки';
+    repeats(message);
