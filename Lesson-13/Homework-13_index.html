@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Homework-13_styles.css">
+    <title>Table</title>
+    
+</head>
+<body>
+    <div>
+    <table id='firstTable'>
+        <tr id="firstRow">
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr class='lastRow' onclick="event.stopPropagation()">
+            <td class='addRows' colspan='3'onclick="myFunction()">
+            <p>Добавить</p>
+            </td>
+        </tr>
+</table>
+</div>
+<script src="Homework-13_main.js"></script>    
+</body>
+</html>
