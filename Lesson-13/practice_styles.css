@@ -1,0 +1,10 @@
+.linksStyle {
+    font-weight: 900;
+    color:#24c0e3;
+}
+
+.setBorder {
+    background: #98c5eb;
+    box-shadow: inset -3px -3px 6px #81a7c8, 
+                inset 3px 3px 6px #afe3ff;
+}
