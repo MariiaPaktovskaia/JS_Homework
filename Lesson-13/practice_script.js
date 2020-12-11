@@ -19,17 +19,10 @@ function changeStyles(EO) {
         searchLinks[i].classList.add('linksStyle');
     };
 };
-secondPar.addEventListener("click", setBorder);
-function setBorder() {
-    secondPar.classList.toggle('setBorder');
-};
-var unclickableLinks = secondPar.children;
-unclickableLinks.onclick="return false";
-
-for (var i = 0; i < unclickableLinks.length; i++) {
-    unclickableLinks[i].addEventListener("click", setAnotherBehavior);
-    function setAnotherBehavior() {
+secondPar.addEventListener("click", function(event) {
+    var target = event.target;
+    if (target === secondPar.firstElementChild || target === secondPar.lastElementChild) {
         event.preventDefault();
-        alert (this.getAttribute('href'));
+        alert (target.getAttribute('href'));
     };
-};
+});
