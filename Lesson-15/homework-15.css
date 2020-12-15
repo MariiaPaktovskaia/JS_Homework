@@ -1,3 +1,47 @@
 #properties {
     float: left;
 }
+.chess {
+    margin-top:20px;
+    margin-left: 20px;
+    border-collapse:collapse;
+    border: 1px solid grey; 
+}
+.chess tr:nth-child(odd) td:nth-child(odd) {
+    background: Orange;
+    width: 40px;
+    height: 40px; 
+    border: 1px solid grey;    
+}	
+.chess tr:nth-child(even) td:nth-child(even) {
+    background: Orange;
+    width: 40px;
+    height: 40px; 
+    border: 1px solid grey;    
+}
+
+.change {
+    margin-top:20px;
+    margin-left: 20px;
+    border-collapse:collapse;
+}
+.change tr:nth-child(even) td:nth-child(odd) {
+    background: Orange;
+    width: 40px;
+    height: 40px;    
+}
+.change tr:nth-child(even) td:nth-child(even) {
+    background: #FFF;
+    width: 40px;
+    height: 40px;    
+}	
+.change tr:nth-child(odd) td:nth-child(even) {
+    background: Orange;
+    width: 40px;
+    height: 40px;    
+}
+.change tr:nth-child(odd) td:nth-child(odd) {
+    background:  #FFF;
+    width: 40px;
+    height: 40px;    
+}
