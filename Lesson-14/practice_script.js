@@ -16,16 +16,16 @@ var searchLinks = firstPar.children;
 
 button1.onclick = changeStyles;
 function changeStyles(EO) {
-    for (var i=0; i<searchLinks.length; i++) {
+    for (var i = 0; i < searchLinks.length; i++) {
         searchLinks[i].classList.toggle('linksStyle');
     };
 };
-secondPar.addEventListener("click", function(event) {
-    var target = event.target;
-    if (target === secondPar.firstElementChild || target === secondPar.lastElementChild) {
+secondPar.addEventListener('click', function(event) {
+    var target = event.target;    
+    if (target.tagName === 'A') {
         event.preventDefault();
-        var storedAge = window.localStorage.getItem(target.text);
-            if ( !storedAge ) {
+        var storedLink = window.localStorage.getItem(target.text);
+            if ( !storedLink ) {
         var object ={};
         object.path = target.getAttribute('href');
         object=JSON.stringify(object);
@@ -34,7 +34,7 @@ secondPar.addEventListener("click", function(event) {
         alert('Ссылка сохранена');
     }
     else {
-        alert(storedAge); 
+        alert(JSON.parse(storedLink).path); 
     }
 };
 });
