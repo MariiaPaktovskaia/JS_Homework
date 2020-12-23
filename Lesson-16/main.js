@@ -64,7 +64,7 @@ button.addEventListener('click', sendXHR);
                         userCard.childNodes[i].classList.remove('checked');
                     };
                 target.classList.add('checked');
-                    for (var i = 0; i < userCard.childNodes.length; i++) {
+                    for (var i = 0; i < result.length; i++) {
                         if (userCard.childNodes[i].classList.contains('checked')) {
                         userCard.childNodes[i+result.length].classList.add('checked')
                         }
