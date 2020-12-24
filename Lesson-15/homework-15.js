@@ -47,6 +47,7 @@ if (createButton.disabled = true) {
             alert('Ошибка! Введите число от 1 до 10!');
             field[0].value='';
             field[1].value='';
+            createButton.disabled = true;
 
         };
     };
