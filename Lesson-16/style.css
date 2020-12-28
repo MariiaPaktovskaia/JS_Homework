@@ -52,7 +52,9 @@ p {
 p:first-child{
     margin-top: 60px;
 }
+
 #userCard .tab {
+    clear: both;
     display: inline-block;
     margin-top: 50px;
     margin-right: 5px;
